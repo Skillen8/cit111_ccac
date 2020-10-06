@@ -12,21 +12,23 @@ import java.util.Scanner;
  */
 public class MathChecker {
     public static void main(String [] args){
-        
+        //Create final ints
         final int MAX_ATTEMPT = 3;
         final int CORRECT_ANSWER = 5;
         
+        //stores user input
         int userAnswer;
         int attemptCount = 0;
         
         System.out.println("***Math Checker***");
         
+        //create scanner
         Scanner userInputScanner = new Scanner(System.in);
          
         while(attemptCount < MAX_ATTEMPT){
-            
+            //ask user
             System.out.println("Computer the value of (10 * 3) / 5");
-            
+            //get user input
             userAnswer = userInputScanner.nextInt();
             
             if(userAnswer == CORRECT_ANSWER){
@@ -50,10 +52,7 @@ public class MathChecker {
         }//close while
         System.out.println("Solution is: (10 * 3) = 30, 30 / 6 = 5 ");
         System.out.println("Thank you for using math checker");
-        
-        
-        
-        
-    }
+       
+    }//close main
     
-}
+}//close class
