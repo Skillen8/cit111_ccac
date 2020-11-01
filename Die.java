@@ -14,29 +14,16 @@ import java.util.Random;
  */
 public class Die {
    
-    final static int DICE_VALUE = 5;
+    final static int UPPER_BOUND_VALUE = 5;
     
     static int rolledDice = 0;
     
-    public static void main(String[] args){
-        
-        roll(); 
-        
-        
-    }//close main
-    
-    
     public static void roll(){
-        
+
         Random roll = new Random();
-        
-        //for(int i = 0; i < 20; i++){
-            rolledDice = roll.nextInt(DICE_VALUE);
-            rolledDice += 1;
-        //}//close for loop
-        
-        
-        
+
+        rolledDice = roll.nextInt(UPPER_BOUND_VALUE) + 1; 
+    
     }//close method
     
     public int getValue(){
@@ -44,8 +31,5 @@ public class Die {
         return rolledDice;
         
     }//close method
-    
-    
-    
-    
-}//close classs
+ 
+}//close class
