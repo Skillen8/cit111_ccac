@@ -5,28 +5,48 @@
  */
 package sammiemakesmesimp;
 
+import java.util.Scanner;
+
+
 /**
  *
  * @author Shane
  */
 public class YahtzeeGame {
-    
-    public static void main(String[] args){
-        
-        die d = new die();
-        
-        for(int i = 0; i < 10; i++){
             
-            d.roll();
-            System.out.println("roll(): " + d.getValue());
- 
-        }//close for loop
+    public static void main(String[] args){
+        Yahtzee yahtzee = new Yahtzee();
+        System.out.println(yahtzee.getScoreCard());
+        Scanner askUser = new Scanner(System.in);
+        int askTwice = 0;
         
-        System.out.println("getValue(): " + d.getValue());
         
+        while(askTwice < 2){
+            
+            System.out.println("Enter die number(s) to keep (separated by a space):");
+            String userKeep = askUser.nextLine();
+            
+            if(userKeep.contains("1") == false){
+            yahtzee.rollADie(0);
+            }//close if
+            if(userKeep.contains("2") == false){
+            yahtzee.rollADie(1);
+            }//close if
+            if(userKeep.contains("3") == false){
+            yahtzee.rollADie(2);
+            }//close if
+            if(userKeep.contains("4") == false){
+            yahtzee.rollADie(3);
+            }//close if
+            if(userKeep.contains("5") == false){
+            yahtzee.rollADie(4);
+            }//close if
+            
+            askTwice += 1;
+            System.out.println(yahtzee.getScoreCard());
+        
+        }//close while   
     }//close main
     
-    
-    
-    
-}
+}//close class
+

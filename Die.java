@@ -14,11 +14,16 @@ import java.util.Random;
  */
 public class Die {
    
-    final static int UPPER_BOUND_VALUE = 5;
     
-    static int rolledDice = 0;
+        final  int UPPER_BOUND_VALUE = 6;
     
-    public static void roll(){
+         int rolledDice = 0;
+        
+    
+       
+    
+    
+    public void roll(){
 
         Random roll = new Random();
 
@@ -33,3 +38,4 @@ public class Die {
     }//close method
  
 }//close class
+    
